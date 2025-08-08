@@ -15,6 +15,17 @@ $(call inherit-product, device/xiaomi/tissot/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# RisingOS
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 625" \
+    RisingMaintainer="answer35"
+
+# Extras
+PRODUCT_NO_CAMERA := false
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_ENABLE_BLUR := false
+TARGET_USES_PICO_GAPPS := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tissot
 PRODUCT_NAME := lineage_tissot
